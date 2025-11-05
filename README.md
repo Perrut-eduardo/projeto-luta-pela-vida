@@ -74,25 +74,24 @@ cd projeto-luta-pela-vida
  
 3. **Abra o arquivo principal:**
 
-Dê duplo clique no arquivo index.html
-
-Ou, no VS Code, use o plugin Live Server para rodar localmente 
+. Dê duplo clique no arquivo index.html, Ou 
+. No VS Code, use o plugin Live Server para rodar localmente.
 
 ✅ Checklist de qualidade
 
- Todas as imagens possuem atributo alt descritivo
+. ✅ Todas as imagens possuem atributo alt descritivo
 
- Todos os campos obrigatórios do formulário possuem required
+. ✅ Todos os campos obrigatórios do formulário possuem required
 
- HTML validado no W3C Validator
+. ✅ HTML validado no W3C Validator
 
- Repositório público no GitHub
+. ✅ Repositório público no GitHub
 
- GitHub Pages ativo e acessível
+. ✅ GitHub Pages ativo e acessível
 
- Estrutura organizada (HTML, CSS, JS e imagens separados)
+. ✅ Estrutura organizada (HTML, CSS, JS e imagens separados)
 
- Responsividade básica testada
+. ✅ Responsividade básica testada
 
 
 ✉️ Contato
