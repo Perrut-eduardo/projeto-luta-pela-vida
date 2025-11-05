@@ -1,82 +1,302 @@
-/* ======== ESTILOS GERAIS ======== */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f8f8f8;
-    color: #333;
+/* ======================================================
+   Projeto Luta Pela Vida — Style (Entrega II)
+   Sistema de Design, Grid 12 colunas, Responsividade,
+   Componentes (cards, botões, badges, formulários, modal)
+   ====================================================== */
+
+/* -----------------------
+   1) Variáveis / Sistema
+   ----------------------- */
+:root{
+  /* Palette (>=8 cores) */
+  --color-primary: #0a2342;    /* azul escuro */
+  --color-primary-700: #081b34;
+  --color-secondary: #f7b731;  /* amarelo / destaque */
+  --color-accent: #1fb6ff;     /* azul claro */
+  --color-success: #2dbf7f;
+  --color-danger: #e05a55;
+  --color-muted: #6b7280;
+  --color-bg: #f5f7fb;
+  --color-surface: #ffffff;
+  --color-border: #e6e9ef;
+
+  /* Tipografia - 5 tamanhos mínimos */
+  --font-base: "Inter", Arial, Helvetica, sans-serif;
+  --fs-xs: 0.75rem;   /* 12px */
+  --fs-sm: 0.875rem;  /* 14px */
+  --fs-md: 1rem;      /* 16px */
+  --fs-lg: 1.25rem;   /* 20px */
+  --fs-xl: 2rem;      /* 32px */
+
+  /* Espaçamento modular (8px scale) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+
+  /* Layout */
+  --max-width: 1200px;
+  --radius: 12px;
+  --shadow-sm: 0 2px 6px rgba(10,35,66,0.06);
+  --shadow-md: 0 6px 20px rgba(10,35,66,0.08);
 }
 
-/* ======== CABEÇALHO ======== */
-header {
-    background-color: #0a2342;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 30px;
+/* Reset simples */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--font-base);
+  font-size:var(--fs-md);
+  background:var(--color-bg);
+  color:#0b1220;
+  -webkit-font-smoothing:antialiased;
 }
 
-.logo {
-    height: 60px;
+/* -----------------------
+   2) Grid 12 colunas (container)
+   ----------------------- */
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0 var(--space-2);
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+/* Sistema de grid 12 colunas (responsive) */
+.grid{
+  display:grid;
+  gap:var(--space-3);
+  grid-template-columns: repeat(12, 1fr);
 }
 
-nav ul li {
-    margin-left: 20px;
+/* helpers para spans */
+.col-12{grid-column:span 12}
+.col-6{grid-column:span 6}
+.col-4{grid-column:span 4}
+.col-3{grid-column:span 3}
+.col-8{grid-column:span 8}
+.col-2{grid-column:span 2}
+
+/* -----------------------
+   3) Breakpoints (5) - mobile-first
+   ----------------------- */
+/* Mobile default: 0 - small phones */
+/* Breakpoints: 480, 768, 992, 1200, 1440 */
+@media (min-width:480px){
+  /* small */
+}
+@media (min-width:768px){
+  /* tablet */
+  .col-sm-6{grid-column:span 6}
+}
+@media (min-width:992px){
+  /* desktop */
+}
+@media (min-width:1200px){
+  /* large */
+}
+@media (min-width:1440px){
+  /* xlarge */
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+/* -----------------------
+   4) Header / Nav (com menu hambúrguer e dropdown)
+   ----------------------- */
+.header{
+  background:var(--color-primary);
+  color:white;
+  padding:var(--space-2) 0;
+  box-shadow:var(--shadow-sm);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.header .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:var(--space-3);
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:var(--space-2);
+}
+.brand img{height:52px;width:auto;border-radius:6px;background:var(--color-surface)}
+.nav{
+  display:flex;
+  align-items:center;
+  gap:var(--space-3);
+}
+.nav ul{
+  list-style:none;
+  display:flex;
+  gap:var(--space-3);
+  margin:0;padding:0;
+  align-items:center;
+}
+.nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  padding:6px 10px;
+  border-radius:6px;
+}
+.nav a:focus, .nav a:hover{background:rgba(255,255,255,0.06)}
+/* submenu (dropdown) */
+.nav .has-dropdown{position:relative}
+.nav .dropdown{
+  display:none;
+  position:absolute;
+  background:var(--color-surface);
+  color: #0b1220;
+  top:calc(100% + 8px);
+  left:0;
+  min-width:220px;
+  border-radius:8px;
+  box-shadow:var(--shadow-md);
+  padding:var(--space-2);
+  border:1px solid var(--color-border);
+}
+.nav .has-dropdown:focus-within > .dropdown,
+.nav .has-dropdown:hover > .dropdown{display:block}
+
+/* hamburger (mobile) */
+.hamburger{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:transparent;
+  border:0;
+  color:white;
+  cursor:pointer;
+}
+.hamburger .bar{
+  width:24px;height:2px;background:white;margin:3px 0;border-radius:2px;
 }
 
-nav ul li a:hover {
-    color: #f7b731;
+/* mobile nav */
+.mobile-nav{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+}
+.mobile-nav .menu{
+  background:var(--color-surface);
+  width:280px;
+  height:100%;
+  padding:var(--space-3);
 }
 
-/* ======== CONTEÚDO PRINCIPAL ======== */
-main {
-    padding: 30px;
-    max-width: 1000px;
-    margin: auto;
+/* show/hide helpers */
+.show-mobile{display:block}
+
+/* -----------------------
+   5) Hero / Page title
+   ----------------------- */
+.hero{
+  padding:var(--space-5) 0;
+  background:linear-gradient(180deg, rgba(10,35,66,0.05), transparent);
+}
+.hero h1{
+  margin:0 0 var(--space-2) 0;
+  font-size:var(--fs-xl);
+  color:var(--color-primary);
 }
 
-h1, h2, h3 {
-    color: #0a2342;
+/* -----------------------
+   6) Cards de projetos
+   ----------------------- */
+.card{
+  background:var(--color-surface);
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:var(--shadow-sm);
+  border:1px solid var(--color-border);
+  display:flex;
+  flex-direction:column;
 }
-
-.sobre p, .institucional p {
-    font-size: 1.1em;
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
 }
-
-/* ======== GALERIA ======== */
-.galeria {
-    margin-top: 40px;
+.card-body{padding:var(--space-3);flex:1;display:flex;flex-direction:column;gap:var(--space-2)}
+.card h3{margin:0;font-size:var(--fs-lg);color:var(--color-primary)}
+.card p{flex:1;margin:0;color:var(--color-muted);font-size:var(--fs-sm)}
+.card .meta{display:flex;gap:var(--space-2);align-items:center;margin-top:auto}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:8px;border:0;cursor:pointer;font-weight:600;
 }
+.btn-primary{background:var(--color-primary);color:white}
+.btn-outline{background:transparent;border:1px solid var(--color-primary);color:var(--color-primary)}
 
-.galeria img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+/* Button states */
+.btn:disabled{opacity:0.45;cursor:not-allowed}
+.btn:focus{outline:3px solid rgba(31,182,255,0.12);}
+.btn:hover:not(:disabled){transform:translateY(-2px);transition:transform .15s}
+
+/* -----------------------
+   7) Badges / Tags
+   ----------------------- */
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:var(--fs-xs);background:var(--color-primary-700);color:white}
+.badge--secondary{background:var(--color-secondary);color:#081b34}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+
+/* -----------------------
+   8) Formulários (estilizado + validação visual)
+   ----------------------- */
+form{background:var(--color-surface);padding:var(--space-3);border-radius:10px;border:1px solid var(--color-border)}
+.form-row{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;align-items:center}
+.form-row .field{grid-column:span 6}
+.field label{display:block;font-weight:600;margin-bottom:6px;font-size:var(--fs-sm)}
+.field input, .field select, .field textarea{
+  width:100%;padding:10px;border:1px solid var(--color-border);border-radius:8px;background:#fff;font-size:var(--fs-sm)
 }
+.field input:focus, .field select:focus, .field textarea:focus{outline:3px solid rgba(31,182,255,0.12);border-color:var(--color-accent)}
+/* visual validation */
+input:required:invalid, textarea:required:invalid{border-color:var(--color-danger);box-shadow:0 0 0 3px rgba(224,90,85,0.08)}
+input:required:valid{border-color:var(--color-success)}
+.form-actions{display:flex;gap:var(--space-2);align-items:center}
 
-/* ======== RODAPÉ ======== */
-footer {
-    background-color: #0a2342;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 0.9em;
-    margin-top: 40px;
+/* -----------------------
+   9) Alerts & modal (feedback)
+   ----------------------- */
+.alert{padding:12px 16px;border-radius:8px;display:flex;gap:12px;align-items:center}
+.alert--info{background:#e8f5ff;border-left:4px solid var(--color-accent)}
+.alert--success{background:#effaf3;border-left:4px solid var(--color-success)}
+.alert--error{background:#fff5f5;border-left:4px solid var(--color-danger)}
+
+.modal-backdrop{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.45)}
+.modal{background:var(--color-surface);max-width:680px;padding:var(--space-3);border-radius:12px;box-shadow:var(--shadow-md)}
+.modal.show{display:flex}
+
+/* -----------------------
+   10) Footer
+   ----------------------- */
+footer{background:var(--color-primary);color:white;padding:var(--space-3);margin-top:var(--space-4)}
+.footer-inner{max-width:var(--max-width);margin:0 auto;display:flex;justify-content:space-between;gap:var(--space-3);align-items:center;padding:0 var(--space-2)}
+
+/* -----------------------
+   11) Responsividade - exemplos
+   ----------------------- */
+@media (max-width:767px){
+  .grid{grid-template-columns:repeat(6,1fr)}
+  .col-6{grid-column:span 6}
+  .col-4{grid-column:span 6}
+  .col-3{grid-column:span 3}
+  .nav{display:none}
+  .hamburger{display:inline-flex}
+  .hero h1{font-size:1.6rem}
+  .card img{height:140px}
+  .form-row .field{grid-column:span 6}
+}
+@media (min-width:768px){
+  .grid{grid-template-columns:repeat(12,1fr)}
+  .nav{display:flex}
+  .hamburger{display:none}
 }
