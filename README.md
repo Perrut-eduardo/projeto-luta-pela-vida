@@ -65,16 +65,20 @@ projeto-luta-pela-vida/
 ## 💻 Como abrir o projeto localmente
 
 1. **Clone o repositório**
+
    ```bash
    git clone https://github.com/Perrut-eduardo/projeto-luta-pela-vida.git
 
-2.Entre na pasta do projeto
+2. **Entre na pasta do projeto:**
 cd projeto-luta-pela-vida
-3.Abra o arquivo principal
+ 
+3. **Abra o arquivo principal:**
 
 Dê duplo clique no arquivo index.html
 
-Ou, no VS Code, use o plugin Live Server para rodar localmente ✅ Checklist de qualidade
+Ou, no VS Code, use o plugin Live Server para rodar localmente 
+
+✅ Checklist de qualidade
 
  Todas as imagens possuem atributo alt descritivo
 
@@ -106,8 +110,6 @@ Você pode reutilizar o código com créditos ao autor.
 
 💬 “A luta é pela vida — e a vitória é servir.”
 
-git add README.md
-git commit -m "Adiciona README completo com informações do projeto"
-git push
+
 
 
