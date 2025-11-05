@@ -98,8 +98,7 @@ cd projeto-luta-pela-vida
 
 Autor: Perrut Eduardo
 📍 Projeto Social Luta Pela Vida
-📧 Email: perrut.eduardo@gmail.com
- (substitua pelo seu email real se quiser)
+📧 Email: perruteduardoads@gmail.com
 🌍 GitHub: @Perrut-eduardo
 
 📜 Licença
