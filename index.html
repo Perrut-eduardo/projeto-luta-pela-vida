@@ -7,16 +7,42 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <img src="assets/images/logo.png" alt="Logo do Projeto Luta Pela Vida" class="logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="header">
+  <div class="container">
+    <div class="brand">
+      <img src="assets/images/logo.png" alt="Logo do Projeto Luta Pela Vida">
+      <div style="color:white;font-weight:700">Projeto Luta Pela Vida</div>
+    </div>
+
+    <nav class="nav" aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li class="has-dropdown" tabindex="0">
+          <a href="projetos.html">Projetos</a>
+          <div class="dropdown" role="menu" aria-hidden="true">
+            <a href="projetos.html#faixa-preta">Faixa Preta</a><br>
+            <a href="projetos.html#formacao">Formação</a>
+          </div>
+        </li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" aria-label="Abrir menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+  </div>
+
+  <!-- mobile nav -->
+  <div class="mobile-nav" aria-hidden="true">
+    <div class="menu">
+      <a href="index.html">Início</a><br>
+      <a href="projetos.html">Projetos</a><br>
+      <a href="cadastro.html">Cadastro</a><br>
+    </div>
+  </div>
+</header>
+
 
     <main>
         <section class="sobre">
