@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projetos - Projeto Luta Pela Vida</title>
 
-<!-- CORREÇÃO DE CAMINHO PARA GITHUB PAGES -->
+<!-- Caminho correto -->
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
@@ -21,14 +21,17 @@
     <nav class="nav" aria-label="Menu principal">
       <ul>
         <li><a href="../index.html">Início</a></li>
+
         <li class="has-dropdown" tabindex="0">
-          <a href="projetos.html">Projetos</a>
-          <div class="dropdown" role="menu" aria-hidden="true">
+          <a class="active" href="projetos.html">Projetos</a>
+
+          <div class="dropdown">
             <a href="#faixa-preta">Faixa Preta</a>
             <a href="#formacao">Formação</a>
             <a href="#camp">Camp</a>
           </div>
         </li>
+
         <li><a href="cadastro.html">Cadastro</a></li>
       </ul>
     </nav>
@@ -38,7 +41,7 @@
     </button>
   </div>
 
-  <div class="mobile-nav" aria-hidden="true">
+  <div class="mobile-nav">
     <div class="panel">
       <a href="../index.html">Início</a>
       <a href="projetos.html">Projetos</a>
@@ -49,83 +52,76 @@
 
 <main>
 
-<section class="container hero">
-  <h2>Nossos Projetos</h2>
-  <p class="lead">Conheça as iniciativas do Projeto Luta Pela Vida.</p>
+<!-- HERO -->
+<section class="hero-inicial">
+    <div class="container text-center">
+        <h1>Nossos Projetos</h1>
+        <p class="lead">Conheça os projetos que transformam vidas através do Jiu-Jitsu.</p>
+    </div>
 </section>
 
-<section class="container mt-2">
+<!-- CARDS -->
+<section class="container mt-3">
+  <h2 class="section-title">Destaques</h2>
+
   <div class="cards">
 
-    <article class="card">
-      <img src="../assets/images/projeto3.jpeg" alt="Alunos do projeto Luta Pela Vida">
+    <article class="card" onclick="location.href='#faixa-preta'">
+      <img src="../assets/images/projeto3.jpeg" alt="Faixa Preta na Vida">
       <div class="card-body">
-        <h3>Projeto Faixa Preta na Vida</h3>
-        <p>Programa de formação de atletas e cidadãos por meio do Jiu-Jitsu.</p>
-
-        <div class="meta">
-          <div class="badges">
-            <span class="badge">Ativo</span>
-            <span class="badge badge--sec">Infantil</span>
-          </div>
-
-          <div style="margin-left:auto">
-            <button class="btn btn-outline" onclick="window.location='projetos.html'">Saiba mais</button>
-            <button class="btn btn-primary" onclick="window.location='cadastro.html'">Inscrever</button>
-          </div>
-        </div>
+        <h3>Faixa Preta na Vida</h3>
+        <p>Formação de atletas e cidadãos por meio do Jiu-Jitsu.</p>
       </div>
     </article>
 
-    <article class="card">
-      <img src="../assets/images/projeto1.jpeg" alt="Treino de crianças">
+    <article class="card" onclick="location.href='#formacao'">
+      <img src="../assets/images/projeto1.jpeg" alt="Projeto Social">
       <div class="card-body">
         <h3>Projeto Social de Formação</h3>
-        <p>Aulas gratuitas para comunidades em vulnerabilidade.</p>
-
-        <div class="meta">
-          <div class="badges">
-            <span class="badge">Ativo</span>
-          </div>
-
-          <div style="margin-left:auto">
-            <button class="btn btn-outline" onclick="window.location='projetos.html'">Saiba mais</button>
-            <button class="btn btn-primary" onclick="window.location='cadastro.html'">Inscrever</button>
-          </div>
-        </div>
+        <p>Aulas gratuitas para crianças e jovens da comunidade.</p>
       </div>
     </article>
 
-    <article class="card">
-      <img src="../assets/images/projeto2.jpeg" alt="Competição e premiação">
+    <article class="card" onclick="location.href='#camp'">
+      <img src="../assets/images/projeto2.jpeg" alt="Camp e Eventos">
       <div class="card-body">
-        <h3>Campeonatos e Eventos</h3>
-        <p>Participação em campeonatos com foco educativo e esportivo.</p>
-
-        <div class="meta">
-          <div class="badges">
-            <span class="badge">Evento</span>
-          </div>
-
-          <div style="margin-left:auto">
-            <button class="btn btn-outline" onclick="window.location='projetos.html'">Saiba mais</button>
-            <button class="btn btn-primary" onclick="window.location='cadastro.html'">Inscrever</button>
-          </div>
-        </div>
+        <h3>Eventos e Campeonatos</h3>
+        <p>Participações esportivas e educativas para nossos alunos.</p>
       </div>
     </article>
 
   </div>
 </section>
 
+<!-- SEÇÃO DETALHADA DOS PROJETOS -->
+
+<section class="container mt-3" id="faixa-preta">
+  <h2 class="section-title">Faixa Preta na Vida</h2>
+  <p>
+    Projeto voltado para formação cidadã, disciplina e desenvolvimento por meio do Jiu-Jitsu.
+  </p>
+</section>
+
+<section class="container mt-3" id="formacao">
+  <h2 class="section-title">Projeto Social de Formação</h2>
+  <p>
+    Aulas gratuitas para crianças e jovens em situação de vulnerabilidade social.
+  </p>
+</section>
+
+<section class="container mt-3" id="camp">
+  <h2 class="section-title">Eventos, Camps e Campeonatos</h2>
+  <p>
+    Encontros esportivos, treinos especiais e participação em competições.
+  </p>
+</section>
+
 </main>
 
-<footer>
-  <p>&copy; 2025 Projeto Luta Pela Vida - Todos os direitos reservados.</p>
+<footer class="footer">
+  <p>&copy; 2025 Projeto Luta Pela Vida — Todos os direitos reservados.</p>
 </footer>
 
-<!-- CORREÇÃO DO CAMINHO DO SCRIPT -->
 <script src="../assets/js/main.js" defer></script>
-
 </body>
 </html>
