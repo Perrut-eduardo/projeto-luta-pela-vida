@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projetos - Projeto Luta Pela Vida</title>
-<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- CORREÇÃO DE CAMINHO PARA GITHUB PAGES -->
+<link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -12,19 +14,19 @@
 <header class="header">
   <div class="container">
     <div class="brand">
-      <img src="assets/images/logo.png" alt="Logo Projeto Luta Pela Vida">
+      <img src="../assets/images/logo.png" alt="Logo Projeto Luta Pela Vida">
       <div class="brand-title">Projeto Luta Pela Vida</div>
     </div>
 
     <nav class="nav" aria-label="Menu principal">
       <ul>
-        <li><a href="index.html">Início</a></li>
+        <li><a href="../index.html">Início</a></li>
         <li class="has-dropdown" tabindex="0">
           <a href="projetos.html">Projetos</a>
           <div class="dropdown" role="menu" aria-hidden="true">
-            <a href="projetos.html#faixa-preta">Faixa Preta</a>
-            <a href="projetos.html#formacao">Formação</a>
-            <a href="projetos.html#camp">Camp</a>
+            <a href="#faixa-preta">Faixa Preta</a>
+            <a href="#formacao">Formação</a>
+            <a href="#camp">Camp</a>
           </div>
         </li>
         <li><a href="cadastro.html">Cadastro</a></li>
@@ -36,20 +38,17 @@
     </button>
   </div>
 
-  <!-- mobile nav -->
   <div class="mobile-nav" aria-hidden="true">
     <div class="panel">
-      <a href="index.html">Início</a>
+      <a href="../index.html">Início</a>
       <a href="projetos.html">Projetos</a>
       <a href="cadastro.html">Cadastro</a>
     </div>
   </div>
 </header>
 
-
-
-
 <main>
+
 <section class="container hero">
   <h2>Nossos Projetos</h2>
   <p class="lead">Conheça as iniciativas do Projeto Luta Pela Vida.</p>
@@ -57,13 +56,19 @@
 
 <section class="container mt-2">
   <div class="cards">
+
     <article class="card">
-      <img src="assets/images/projeto3.jpeg" alt="Alunos do projeto Luta Pela Vida">
+      <img src="../assets/images/projeto3.jpeg" alt="Alunos do projeto Luta Pela Vida">
       <div class="card-body">
         <h3>Projeto Faixa Preta na Vida</h3>
         <p>Programa de formação de atletas e cidadãos por meio do Jiu-Jitsu.</p>
+
         <div class="meta">
-          <div class="badges"><span class="badge">Ativo</span> <span class="badge badge--sec">Infantil</span></div>
+          <div class="badges">
+            <span class="badge">Ativo</span>
+            <span class="badge badge--sec">Infantil</span>
+          </div>
+
           <div style="margin-left:auto">
             <button class="btn btn-outline" onclick="window.location='projetos.html'">Saiba mais</button>
             <button class="btn btn-primary" onclick="window.location='cadastro.html'">Inscrever</button>
@@ -72,14 +77,17 @@
       </div>
     </article>
 
-    <!-- copie mais 2 cards (ou crie dinamicamente) -->
     <article class="card">
-      <img src="assets/images/projeto1.jpg" alt="Treino de crianças">
+      <img src="../assets/images/projeto1.jpeg" alt="Treino de crianças">
       <div class="card-body">
         <h3>Projeto Social de Formação</h3>
         <p>Aulas gratuitas para comunidades em vulnerabilidade.</p>
+
         <div class="meta">
-          <div class="badges"><span class="badge">Ativo</span></div>
+          <div class="badges">
+            <span class="badge">Ativo</span>
+          </div>
+
           <div style="margin-left:auto">
             <button class="btn btn-outline" onclick="window.location='projetos.html'">Saiba mais</button>
             <button class="btn btn-primary" onclick="window.location='cadastro.html'">Inscrever</button>
@@ -89,12 +97,16 @@
     </article>
 
     <article class="card">
-      <img src="assets/images/projeto2.jpeg" alt="Competição e premiação">
+      <img src="../assets/images/projeto2.jpeg" alt="Competição e premiação">
       <div class="card-body">
         <h3>Campeonatos e Eventos</h3>
         <p>Participação em campeonatos com foco educativo e esportivo.</p>
+
         <div class="meta">
-          <div class="badges"><span class="badge">Evento</span></div>
+          <div class="badges">
+            <span class="badge">Evento</span>
+          </div>
+
           <div style="margin-left:auto">
             <button class="btn btn-outline" onclick="window.location='projetos.html'">Saiba mais</button>
             <button class="btn btn-primary" onclick="window.location='cadastro.html'">Inscrever</button>
@@ -102,13 +114,18 @@
         </div>
       </div>
     </article>
+
   </div>
 </section>
 
-<p>&copy; 2025 Projeto Luta Pela Vida - Todos os direitos reservados.</p>
+</main>
+
+<footer>
+  <p>&copy; 2025 Projeto Luta Pela Vida - Todos os direitos reservados.</p>
 </footer>
 
-<script src="assets/js/main.js" defer></script>
+<!-- CORREÇÃO DO CAMINHO DO SCRIPT -->
+<script src="../assets/js/main.js" defer></script>
 
 </body>
 </html>
