@@ -1,29 +1,19 @@
-import { Home, Projetos, Cadastro } from "./components.js";
-import { validarFormulario } from "./forms.js";
-
-function navegar() {
-    const rota = location.hash || "#home";
+async function loadPage(page) {
     const app = document.querySelector("#app");
 
-    switch (rota) {
-        case "#home":
-            app.innerHTML = Home;
-            break;
+    try {
+        const response = await fetch(`pages/${page}.html`);
+        const html = await response.text();
+        app.innerHTML = html;
 
-        case "#projetos":
-            app.innerHTML = Projetos;
-            break;
+        // carregar JS da página se existir
+        if (page === "cadastro") {
+            import("./pages/cadastro.js");
+        }
 
-        case "#cadastro":
-            app.innerHTML = Cadastro;
-            validarFormulario();
-            break;
-
-        default:
-            app.innerHTML = "<h2>Página não encontrada</h2>";
-            break;
+    } catch (error) {
+        app.innerHTML = "<h2>Erro ao carregar página.</h2>";
     }
 }
 
-window.addEventListener("load", navegar);
-window.addEventListener("hashchange", navegar);
+export { loadPage };
