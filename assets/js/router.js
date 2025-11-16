@@ -18,8 +18,12 @@ function navegar() {
             app.innerHTML = Cadastro;
             validarFormulario();
             break;
+
+        default:
+            app.innerHTML = "<h2>Página não encontrada</h2>";
+            break;
     }
 }
 
-window.addEventListener("hashchange", navegar);
 window.addEventListener("load", navegar);
+window.addEventListener("hashchange", navegar);

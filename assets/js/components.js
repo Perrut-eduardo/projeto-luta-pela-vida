@@ -1,28 +1,38 @@
 export const Home = `
-    <section>
-        <h1>Bem-vindo ao Projeto Luta Pela Vida</h1>
-        <p>Usamos o esporte como ferramenta de transformação, disciplina e esperança.</p>
+    <section class="pagina">
+        <h2>Bem-vindo à Ulbra TECH</h2>
+        <p>Seu portal de inovação e tecnologia.</p>
     </section>
 `;
 
 export const Projetos = `
-    <section>
-        <h1>Nossos Projetos</h1>
-        <p>Conheça as iniciativas do Projeto Luta Pela Vida.</p>
+    <section class="pagina">
+        <h2>Projetos</h2>
+        <ul>
+            <li>Projeto Robótica</li>
+            <li>Aplicativos Mobile</li>
+            <li>Jogos Digitais</li>
+        </ul>
     </section>
 `;
 
 export const Cadastro = `
-    <section>
-        <h1>Cadastro</h1>
-        <form id="formCadastro">
-            <label>Nome</label>
-            <input type="text" name="nome" required>
+    <section class="pagina">
+        <h2>Cadastro de Aluno</h2>
 
-            <label>Email</label>
-            <input type="email" name="email" required>
+        <form id="formCadastro">
+            <label>Nome:</label>
+            <input type="text" id="nome" required>
+
+            <label>E-mail:</label>
+            <input type="email" id="email" required>
+
+            <label>Idade:</label>
+            <input type="number" id="idade" required min="1">
 
             <button type="submit">Enviar</button>
         </form>
+
+        <p id="mensagem"></p>
     </section>
 `;

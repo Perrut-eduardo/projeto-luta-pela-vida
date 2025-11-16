@@ -1,42 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Luta Pela Vida</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ulbra Tech</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
 
-<header class="header">
-  <div class="container">
-    <div class="brand">
-      <img src="assets/images/logo.png" alt="Logo Projeto Luta Pela Vida">
-      <div class="brand-title">Projeto Luta Pela Vida</div>
-    </div>
+    <!-- HEADER -->
+    <header>
+        <h1>Ulbra TECH</h1>
 
-    <nav class="nav" aria-label="Menu principal">
-      <ul>
-        <li><a href="#home">Início</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#cadastro">Cadastro</a></li>
-      </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#cadastro">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <button class="hamburger" aria-label="Abrir menu">
-      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-    </button>
-  </div>
-</header>
+    <!-- ÁREA DO SPA -->
+    <!-- Todo o conteúdo das páginas será carregado aqui -->
+    <main id="app"></main>
 
-<!-- SPA CONTENT -->
-<main id="app"></main>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Ulbra Tech</p>
+    </footer>
 
-<footer>
-    <p>&copy; 2025 Projeto Luta Pela Vida | Todos os direitos reservados</p>
-</footer>
-
-<script src="assets/js/router.js" type="module"></script>
+    <!-- IMPORTAÇÃO DO ROUTER (MÓDULO) -->
+    <script src="assets/js/router.js" type="module"></script>
 
 </body>
 </html>
