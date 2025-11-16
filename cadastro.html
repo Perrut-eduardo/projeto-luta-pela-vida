@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cadastro - Projeto Luta Pela Vida</title>
-<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Caminho correto para a raiz -->
+<link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -12,22 +14,26 @@
 <header class="header">
   <div class="container">
     <div class="brand">
-      <img src="assets/images/logo.png" alt="Logo Projeto Luta Pela Vida">
+      <!-- Caminho correto para a raiz -->
+      <img src="./assets/images/logo.png" alt="Logo Projeto Luta Pela Vida">
       <div class="brand-title">Projeto Luta Pela Vida</div>
     </div>
 
     <nav class="nav" aria-label="Menu principal">
       <ul>
-        <li><a href="index.html">Início</a></li>
+        <li><a href="./index.html">Início</a></li>
+
         <li class="has-dropdown" tabindex="0">
-          <a href="projetos.html">Projetos</a>
-          <div class="dropdown" role="menu" aria-hidden="true">
-            <a href="projetos.html#faixa-preta">Faixa Preta</a>
-            <a href="projetos.html#formacao">Formação</a>
-            <a href="projetos.html#camp">Camp</a>
+          <a href="./projetos.html">Projetos</a>
+
+          <div class="dropdown">
+            <a href="./projetos.html#faixa-preta">Faixa Preta</a>
+            <a href="./projetos.html#formacao">Formação</a>
+            <a href="./projetos.html#camp">Camp</a>
           </div>
         </li>
-        <li><a class="active" href="cadastro.html">Cadastro</a></li>
+
+        <li><a class="active" href="./cadastro.html">Cadastro</a></li>
       </ul>
     </nav>
 
@@ -36,11 +42,12 @@
     </button>
   </div>
 
-  <div class="mobile-nav" aria-hidden="true">
+  <!-- MENU MOBILE COM CAMINHOS CORRETOS -->
+  <div class="mobile-nav">
     <div class="panel">
-      <a href="index.html">Início</a>
-      <a href="projetos.html">Projetos</a>
-      <a href="cadastro.html">Cadastro</a>
+      <a href="./index.html">Início</a>
+      <a href="./projetos.html">Projetos</a>
+      <a href="./cadastro.html">Cadastro</a>
     </div>
   </div>
 </header>
@@ -53,6 +60,7 @@
 </section>
 
 <section class="container mt-2">
+
   <form class="form-card" id="formCadastro">
     
     <div class="form-group">
@@ -97,6 +105,7 @@
   <p id="mensagemSucesso" class="sucesso" style="display:none;">
     Cadastro enviado com sucesso! Entraremos em contato em breve.
   </p>
+
 </section>
 
 </main>
@@ -105,10 +114,11 @@
   <p>&copy; 2025 Projeto Luta Pela Vida - Todos os direitos reservados.</p>
 </footer>
 
-<script src="assets/js/main.js" defer></script>
+<!-- Caminho correto -->
+<script src="./assets/js/main.js" defer></script>
 
 <script>
-// Mensagem de sucesso (por enquanto sem backend)
+// Mensagem de sucesso fictícia (sem backend)
 document.getElementById("formCadastro").addEventListener("submit", function(e) {
   e.preventDefault();
   document.getElementById("mensagemSucesso").style.display = "block";
